@@ -1,5 +1,7 @@
 package com.example.smartpropertymanagementsystem;
 
-public class LoginPage {
+import javafx.application.Application;
+
+public class LoginPage  {
 
 }
