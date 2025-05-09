@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <PasswordField prefHeight="26.0" prefWidth="121.0" BorderPane.alignment="CENTER" />
-   </center>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.LoginPage">
+   <children>
+      <ImageView fitHeight="646.0" fitWidth="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/loginpage2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="60.0" layoutX="312.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/user-lock.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="138.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="87.6910400390625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="138.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="87.6910400390625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userNameField" layoutX="248.0" layoutY="246.0" prefHeight="34.0" prefWidth="219.0" promptText="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passWordField" layoutX="248.0" layoutY="310.0" prefHeight="34.0" prefWidth="219.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="loginButton" layoutX="372.0" layoutY="388.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #74a5a5;" styleClass="buttonHover" text="Log in" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="invalidPasswordText" fill="#ff4600" layoutX="260.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Password!!!" visible="false" wrappingWidth="124.5367431640625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

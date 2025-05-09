@@ -17,6 +17,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
         //Add here the first function that should be called the form
+        showLoginForm();
     }
 
     public static void showLoginForm() throws IOException {
