@@ -1,0 +1,7 @@
+#loginButton{
+-fx-background-color: #4CAF50; /* Green */}
+    -fx-text-fill: white; /* White text */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-font-size: 16px; /* Font size */
+    -fx-border-radius: 5px; /* Rounded corners */
+    }

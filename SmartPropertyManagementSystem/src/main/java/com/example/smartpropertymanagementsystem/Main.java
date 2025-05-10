@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 public class Main extends Application {
     private static Stage primaryStage;
-
     public static void main(String[] args) {
         launch(args);
     }
@@ -16,14 +15,18 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
+
         //Add here the first function that should be called the form
         showLoginForm();
     }
 
     public static void showLoginForm() throws IOException {
         Parent root = FXMLLoader.load(Main.class.getResource("LoginPage.fxml"));
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(Main.class.getResource("ui/buttonHover.css").toExternalForm());
+        primaryStage.setScene(scene);
         primaryStage.setTitle("Login Form");
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
