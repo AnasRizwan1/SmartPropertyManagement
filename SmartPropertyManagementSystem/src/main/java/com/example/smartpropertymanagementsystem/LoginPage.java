@@ -24,6 +24,19 @@ public class LoginPage {
     @FXML
     private TextField userNameField;
 
+    public void loginButtonClick(ActionEvent event){
+        String username = userNameField.getText();
+        String password = passWordField.getText();
+        if (username.equals("admin") && password.equals("admin")) {
+            try {
+                Main.showDashboard();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            invalidPasswordText.setVisible(true);
+        }
+    }
 
 
 }
