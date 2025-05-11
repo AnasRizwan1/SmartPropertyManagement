@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.Dashboard">
    <children>
       <ImageView fitHeight="712.0" fitWidth="1323.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -23,6 +25,89 @@
             <Image url="@../Pictures/fullformLogo.png" />
          </image>
       </ImageView>
-      <BorderPane prefHeight="700.0" prefWidth="1293.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="stackPane" alignment="CENTER_LEFT" prefHeight="706.0" prefWidth="634.0">
+         <children>
+            <Pane fx:id="paymentPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="210.0" translateY="370.0" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <Button fx:id="addInstallmentButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Add Advance">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="expenseReportButton1" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Add Installment">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="confirmationButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Payment Confirmation">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="receiptButton" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Generate Receipt">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="reportsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="210.0" translateY="300.0" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <Button fx:id="customerLedgerButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Customer Ledger">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="expenseReportButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Expense Report">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="incomeReportButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Income Report">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="addNewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="210.0" translateY="230.0" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <Button fx:id="plotButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Plot">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="customerButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Customer">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="headButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Head">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+            <Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="addNewButton" layoutY="230.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Add New">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reportsButton" layoutY="300.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Reports">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="paymentButton" layoutY="370.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Payment">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>

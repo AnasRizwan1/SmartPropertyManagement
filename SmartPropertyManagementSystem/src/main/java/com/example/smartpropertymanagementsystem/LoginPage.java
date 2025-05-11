@@ -1,43 +1,37 @@
-
 package com.example.smartpropertymanagementsystem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class LoginPage {
+    private Stage primaryStage;
+    private Scene scene;
+    private Parent root;
 
-    @FXML
-    private Text invalidPasswordText;
-//    Set this to true if password is correct use inavalidPasswordText.setVisible(true)
+    @FXML private TextField userNameField;
+    @FXML private PasswordField passWordField;
+    @FXML private Text invalidPasswordText;
 
-
-    @FXML
-    private Button loginButton;
-
-    @FXML
-    private PasswordField passWordField;
-
-    @FXML
-    private TextField userNameField;
-
-    public void loginButtonClick(ActionEvent event){
-        String username = userNameField.getText();
-        String password = passWordField.getText();
-        if (username.equals("admin") && password.equals("admin")) {
-            try {
-                Main.showDashboard();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
+    public void switchToDashboard(ActionEvent event) throws IOException {
+        if(userNameField.getText().equals("admin") && passWordField.getText().equals("admin")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+            root = fxmlLoader.load();
+            primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            primaryStage.setTitle("Dashboard");
+            scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("ui/dashboard.css").toExternalForm());
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } else
             invalidPasswordText.setVisible(true);
-        }
     }
-
-
 }
-

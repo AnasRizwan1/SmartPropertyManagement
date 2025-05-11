@@ -5,9 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
+
 import java.io.IOException;
 public class Main extends Application {
     private static Stage primaryStage;
@@ -24,7 +22,7 @@ public class Main extends Application {
     }
 
     public static void showLoginForm() throws IOException {
-        Parent root = FXMLLoader.load(Main.class.getResource("LoginPage.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("loginPage.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(Main.class.getResource("ui/buttonHover.css").toExternalForm());
 
@@ -34,30 +32,4 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
-    public static void showDashboard() throws IOException {
-        Parent root = FXMLLoader.load(Main.class.getResource("Dashboard.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.centerOnScreen();
-        primaryStage.setTitle("Smart Property Management System");
-
-        primaryStage.setResizable(false);
-        primaryStage.show();
-    }
-
-
-    //This function is solely for changing the scene using the controller classes. If functionality
-    //is needed, it should be added in the controller classes. Else it should not be used.
-    public void ChangeScene(String fxml, String title ,  int width , int height) throws IOException {
-        FXMLLoader root = new FXMLLoader(Main.class.getResource(fxml));
-        Scene scene = new Scene(root.load(), width, height);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle(title);
-        primaryStage.show();
-    }
-
-
-
-
-
 }
