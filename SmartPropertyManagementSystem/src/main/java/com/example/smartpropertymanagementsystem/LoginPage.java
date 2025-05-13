@@ -21,7 +21,7 @@ public class LoginPage {
     @FXML private PasswordField passWordField;
     @FXML private Text invalidPasswordText;
 
-    public void switchToDashboard(ActionEvent event) throws IOException {
+    public void login(ActionEvent event) throws IOException {
         if(userNameField.getText().equals("admin") && passWordField.getText().equals("admin")) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
             root = fxmlLoader.load();

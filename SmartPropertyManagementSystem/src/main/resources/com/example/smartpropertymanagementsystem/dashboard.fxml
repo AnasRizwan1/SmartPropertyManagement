@@ -29,22 +29,22 @@
          <children>
             <Pane fx:id="paymentPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="210.0" translateY="370.0" StackPane.alignment="TOP_LEFT">
                <children>
-                  <Button fx:id="addInstallmentButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Add Advance">
+                  <Button fx:id="addAdvanceButton" layoutX="10.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Add Advance">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="expenseReportButton1" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Add Installment">
+                  <Button fx:id="addInstallmentButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Add Installment">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="confirmationButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Payment Confirmation">
+                  <Button fx:id="confirmationButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Payment Confirmation">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="receiptButton" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Generate Receipt">
+                  <Button fx:id="receiptButton" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Generate Receipt">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -53,17 +53,17 @@
             </Pane>
             <Pane fx:id="reportsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="210.0" translateY="300.0" StackPane.alignment="TOP_LEFT">
                <children>
-                  <Button fx:id="customerLedgerButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Customer Ledger">
+                  <Button fx:id="customerLedgerButton" layoutX="10.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Customer Ledger">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="expenseReportButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Expense Report">
+                  <Button fx:id="expenseReportButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Expense Report">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="incomeReportButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Income Report">
+                  <Button fx:id="incomeReportButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Income Report">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
@@ -72,17 +72,17 @@
             </Pane>
             <Pane fx:id="addNewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="210.0" translateY="230.0" StackPane.alignment="TOP_LEFT">
                <children>
-                  <Button fx:id="plotButton" layoutX="10.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Plot">
+                  <Button fx:id="plotButton" layoutX="10.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Plot">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="customerButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Customer">
+                  <Button fx:id="customerButton" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Customer">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <Button fx:id="headButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Head">
+                  <Button fx:id="headButton" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Head">
                      <font>
                         <Font name="Calibri" size="24.0" />
                      </font>
