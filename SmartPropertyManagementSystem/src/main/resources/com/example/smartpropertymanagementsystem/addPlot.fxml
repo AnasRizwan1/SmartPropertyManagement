@@ -1,46 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Add New Plot">
+      <Text layoutX="639.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Plot">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
-      </Label>
-      <GridPane alignment="TOP_CENTER" prefHeight="565.0" prefWidth="1300.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="666.0" minWidth="10.0" prefWidth="666.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="666.0" minWidth="10.0" prefWidth="666.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="666.0" minWidth="10.0" prefWidth="666.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.199951171875" minWidth="10.0" prefWidth="634.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-          <RowConstraints maxHeight="57.60000152587891" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-          <RowConstraints maxHeight="73.60000610351562" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-          <RowConstraints maxHeight="28.79999389648438" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-            <RowConstraints maxHeight="22.9333480834961" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-            <RowConstraints maxHeight="22.9333480834961" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-            <RowConstraints maxHeight="22.9333480834961" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-            <RowConstraints maxHeight="80.0" minHeight="1.0" percentHeight="100.0" prefHeight="0.0" />
-        </rowConstraints>
-         <children>
-            <TextField prefHeight="46.0" prefWidth="334.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No" textAlignment="CENTER" wrappingWidth="334.84898376464844" GridPane.rowIndex="1">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Text>
-         </children>
-      </GridPane>
+      </Text>
+      <Text layoutX="53.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No: Auto">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="areaTextField" layoutX="147.0" layoutY="146.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="48.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="plotNoTextField" layoutX="143.0" layoutY="217.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="50.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="addressTextField" layoutX="145.0" layoutY="291.0" prefHeight="51.0" prefWidth="557.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="46.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXRadioButton fx:id="ownedRadioButton" layoutX="163.0" layoutY="384.0" prefHeight="35.0" prefWidth="121.0" text="Owned">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="status" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="unownedRadioButton" layoutX="322.0" layoutY="385.0" prefHeight="35.0" prefWidth="160.0" text="Unowned" toggleGroup="$status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="inProgressRadioButton" layoutX="502.0" layoutY="383.0" prefHeight="35.0" prefWidth="160.0" text="In Progress" toggleGroup="$status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXCheckBox fx:id="cornerCheckBox" layoutX="47.0" layoutY="567.0" text="Corner">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="mainRoadCheckBox" layoutX="270.0" layoutY="565.0" text="On Main road">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXCheckBox>
+      <Text layoutX="54.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner CNIC: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="CNICTextField" layoutX="219.0" layoutY="459.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
    </children>
-</VBox>
+</AnchorPane>

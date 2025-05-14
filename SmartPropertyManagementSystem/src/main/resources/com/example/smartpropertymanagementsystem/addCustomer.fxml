@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddCustomer">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddCustomer">
    <children>
       <Label layoutX="612.0" layoutY="14.0" text="Add Customer" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="37.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC:" wrappingWidth="69.07007217407227">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="CNICTextField" layoutX="248.0" layoutY="72.0" promptText="e.g 3520130873783">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="32.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" wrappingWidth="146.93671798706055">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fNameTextField" layoutX="251.0" layoutY="147.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="32.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name: " wrappingWidth="146.93671798706055">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="lNameTextField" layoutX="251.0" layoutY="234.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="32.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: " wrappingWidth="146.93671798706055">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="addressTextField" layoutX="251.0" layoutY="428.0" prefHeight="51.0" prefWidth="631.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="42.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="146.93671798706055">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="registrationDateTextField" layoutX="261.0" layoutY="323.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

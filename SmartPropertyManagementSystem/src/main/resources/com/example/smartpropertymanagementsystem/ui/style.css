@@ -44,8 +44,8 @@
     -fx-font-family: "Ariel", Times, serif;
     -fx-font-size: 25px;
     -fx-text-fill: white;
-    -fx.bold: true;
-    -fx.center-text: true;
+    -fx-bold: true;
+    -fx-center-text: true;
     -fx-alignment: center;
     -fx-weight: bold;
     -fx-underline: true;

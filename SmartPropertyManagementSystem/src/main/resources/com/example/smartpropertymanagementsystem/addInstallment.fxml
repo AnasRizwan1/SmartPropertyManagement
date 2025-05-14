@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddInstallment">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddInstallment">
    <children>
       <Label layoutX="286.0" layoutY="6.0" text="Add Installment" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="37.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: Auto">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="amountTextField" layoutX="158.0" layoutY="287.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="37.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="receivingDateTextField" layoutX="157.0" layoutY="199.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="plotNoTextField" layoutX="156.0" layoutY="127.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Text layoutX="40.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment No:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="installmentNoTextField" layoutX="227.0" layoutY="373.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

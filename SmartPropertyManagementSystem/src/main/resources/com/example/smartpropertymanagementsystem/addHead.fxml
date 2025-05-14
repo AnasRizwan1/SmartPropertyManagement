@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddHead">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddHead">
    <children>
       <Label layoutX="286.0" layoutY="6.0" text="Add Head" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Head: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="headTextField" layoutX="137.0" layoutY="71.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <JFXRadioButton fx:id="incomeRadioButton" layoutX="154.0" layoutY="191.0" text="Income">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="expenseRadioButton" layoutX="322.0" layoutY="189.0" text="Expense">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <Text layoutX="19.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

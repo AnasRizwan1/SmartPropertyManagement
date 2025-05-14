@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
    <children>
-      <Label layoutX="286.0" layoutY="6.0" text="Add Advance" />
+      <Label layoutX="617.0" layoutY="26.0" text="Add Advance" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="37.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No: " />
+      <TextField fx:id="plotNoTextField" layoutX="148.0" layoutY="94.0" />
+      <Text layoutX="35.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" />
+      <TextField fx:id="amountTextField" layoutX="146.0" layoutY="145.0" />
+      <Text layoutX="25.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiving Date: " />
+      <TextField fx:id="receivingDateTextField" layoutX="143.0" layoutY="210.0" />
+      <Text layoutX="45.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: Auto" />
    </children>
 </AnchorPane>
