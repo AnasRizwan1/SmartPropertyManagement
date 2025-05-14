@@ -61,5 +61,15 @@
             <Font size="24.0" />
          </font>
       </TextField>
+      <JFXButton fx:id="saveButton" layoutX="105.0" layoutY="550.0" text="Save">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearButton" layoutX="285.0" layoutY="556.0" text="Clear">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

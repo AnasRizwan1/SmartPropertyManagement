@@ -17,5 +17,9 @@
       <Text layoutX="25.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiving Date: " />
       <TextField fx:id="receivingDateTextField" layoutX="143.0" layoutY="210.0" />
       <Text layoutX="45.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: Auto" />
+      <JFXButton fx:id="saveButton" layoutX="67.0" layoutY="342.0" text="Save" />
+      <JFXButton fx:id="clearButton" layoutX="247.0" layoutY="348.0" text="Clear" />
+      <Text layoutX="25.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount:" />
+      <TextField fx:id="paidAmountTextField" layoutX="143.0" layoutY="273.0" />
    </children>
 </AnchorPane>
