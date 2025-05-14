@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.Confirmation">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" stylesheets="@ui/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.Confirmation">
    <children>
       <Label layoutX="240.0" layoutY="5.0" text="Payment Confirmation" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <JFXTreeTableView fx:id="treeTableView" layoutX="50" layoutY="50" prefHeight="579.0" prefWidth="804.0">
+         <columns>
+            <TreeTableColumn fx:id="paymentIDColumn" prefWidth="152.79998397827148" text="Payment ID" />
+            <TreeTableColumn fx:id="plotNoColumn" prefWidth="122.40000915527344" text="Plot No" />
+            <TreeTableColumn fx:id="typeColumn" prefWidth="99.20001220703125" text="Type" />
+            <TreeTableColumn fx:id="amountColumn" prefWidth="132.79998779296875" text="Amount" />
+            <TreeTableColumn fx:id="paidAmountColumn" prefWidth="168.7999267578125" text="Paid Amount" />
+            <TreeTableColumn fx:id="action" prefWidth="125.60003662109375" text="Confirm" />
+
+         </columns>
+      </JFXTreeTableView>
    </children>
 </AnchorPane>

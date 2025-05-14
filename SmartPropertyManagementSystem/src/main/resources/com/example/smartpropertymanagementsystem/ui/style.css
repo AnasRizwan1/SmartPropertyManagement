@@ -50,3 +50,12 @@
     -fx-weight: bold;
     -fx-underline: true;
 }
+
+.jfx-tree-table-view {
+    -fx-background-color: black;
+}
+
+.jfx-tree-table-row-cell {
+    -fx-text-fill: red;
+    -fx-background-color: blue;
+}
