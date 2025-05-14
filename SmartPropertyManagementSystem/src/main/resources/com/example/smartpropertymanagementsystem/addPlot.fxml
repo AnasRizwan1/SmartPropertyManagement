@@ -23,7 +23,7 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="plotNoTextField" layoutX="792.0" layoutY="270.0">
+      <TextField fx:id="priceTextField" layoutX="792.0" layoutY="270.0">
          <font>
             <Font size="24.0" />
          </font>
@@ -41,7 +41,7 @@
             <ToggleGroup fx:id="status" />
          </toggleGroup>
       </JFXRadioButton>
-      <JFXRadioButton fx:id="unownedRadioButton" layoutX="386.0" layoutY="461.0" prefHeight="35.0" prefWidth="160.0" text="Unowned" textFill="WHITE" toggleGroup="$status">
+      <JFXRadioButton fx:id="unOwnedRadioButton" layoutX="386.0" layoutY="461.0" prefHeight="35.0" prefWidth="160.0" text="Unowned" textFill="WHITE" toggleGroup="$status">
          <font>
             <Font size="24.0" />
          </font>
@@ -71,8 +71,8 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <JFXButton fx:id="saveButton" layoutX="988.0" layoutY="597.0" prefHeight="42.0" prefWidth="126.0" text="Save" />
-      <JFXButton fx:id="clearButton" layoutX="130.0" layoutY="597.0" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <JFXButton fx:id="saveButton" layoutX="988.0" layoutY="597.0" onAction="#saveInformation" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <JFXButton fx:id="clearButton" layoutX="130.0" layoutY="597.0" onAction="#clearInformation" prefHeight="42.0" prefWidth="126.0" text="Clear" />
       <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1191.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures/LogoPng.png" />
@@ -83,7 +83,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="CNICTextField1" layoutX="791.0" layoutY="172.0">
+      <TextField fx:id="plotNoTextField" layoutX="791.0" layoutY="172.0">
          <font>
             <Font size="24.0" />
          </font>

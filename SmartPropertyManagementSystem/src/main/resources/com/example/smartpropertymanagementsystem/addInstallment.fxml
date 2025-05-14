@@ -25,13 +25,13 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <DatePicker fx:id="receivingDateTextField" layoutX="405.0" layoutY="291.0" prefHeight="34.0" prefWidth="198.0" />
+      <DatePicker fx:id="receivingDatePicker" layoutX="405.0" layoutY="291.0" prefHeight="34.0" prefWidth="198.0" />
       <TextField fx:id="installmentNoTextField" layoutX="404.0" layoutY="368.0" prefHeight="36.0" prefWidth="201.0">
          <font>
             <Font size="18.0" />
          </font></TextField>
 
-      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="464.0" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="464.0" onAction="#saveInformation" prefHeight="42.0" prefWidth="126.0" text="Save" />
       <Text layoutX="702.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID : Auto" wrappingWidth="391.5706787109375">
          <font>
             <Font size="18.0" />
@@ -80,7 +80,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="468.0" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="468.0" onAction="#clearInformation" prefHeight="42.0" prefWidth="126.0" text="Clear" />
       <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1191.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures/LogoPng.png" />

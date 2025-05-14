@@ -26,8 +26,7 @@ public class Dashboard {
     @FXML private Pane reportsPane;
     @FXML private Pane paymentPane;
 
-    @FXML
-    private Label dateTimeLabel;
+    @FXML private Label dateTimeLabel;
 
     public void initialize(){
             mainPane.setStyle("-fx-background-color: #011b3c");
@@ -80,6 +79,15 @@ public class Dashboard {
         primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource(cssFile).toExternalForm());
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    public void logout(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginPage.fxml"));
+        root = fxmlLoader.load();
+        primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("ui/loginForm.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

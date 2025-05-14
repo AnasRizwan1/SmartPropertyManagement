@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
    <children>
       <Label layoutX="538.0" layoutY="12.0" text="Add Advance">
          <font>
@@ -29,8 +33,8 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="439.0" prefHeight="42.0" prefWidth="126.0" text="Save" />
-      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="443.0" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="439.0" onAction="#saveInformation" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="443.0" onAction="#clearInformation" prefHeight="42.0" prefWidth="126.0" text="Clear" />
       <Text layoutX="222.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount" wrappingWidth="138.7705078125">
          <font>
             <Font size="18.0" />
@@ -62,7 +66,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <DatePicker fx:id="receivingDateTextField" layoutX="405.0" layoutY="287.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: blue;" />
+      <DatePicker fx:id="receivingDatePicker" layoutX="405.0" layoutY="287.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: blue;" />
       <Text layoutX="699.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Amount" wrappingWidth="195.3038330078125">
          <font>
             <Font size="18.0" />

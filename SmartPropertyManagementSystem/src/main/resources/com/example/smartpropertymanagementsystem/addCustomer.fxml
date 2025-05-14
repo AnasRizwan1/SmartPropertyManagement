@@ -62,12 +62,12 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXButton fx:id="saveButton" layoutX="960.0" layoutY="461.0" prefHeight="51.0" prefWidth="161.0" text="Save">
+      <JFXButton fx:id="saveButton" layoutX="960.0" layoutY="461.0" onAction="#saveInformation" prefHeight="51.0" prefWidth="161.0" text="Save">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="clearButton" layoutX="179.0" layoutY="459.0" prefHeight="51.0" prefWidth="147.0" text="Clear">
+      <JFXButton fx:id="clearButton" layoutX="179.0" layoutY="459.0" onAction="#clearInformation" prefHeight="51.0" prefWidth="147.0" text="Clear">
          <font>
             <Font size="24.0" />
          </font>
@@ -77,6 +77,6 @@
             <Image url="@../Pictures/LogoPng.png" />
          </image>
       </ImageView>
-      <DatePicker fx:id="dateTextField" layoutX="893.0" layoutY="173.0" prefHeight="40.0" prefWidth="223.0" />
+      <DatePicker fx:id="registrationDatePicker" layoutX="893.0" layoutY="173.0" prefHeight="40.0" prefWidth="223.0" />
    </children>
 </AnchorPane>

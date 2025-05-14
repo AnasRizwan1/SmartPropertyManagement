@@ -42,12 +42,12 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXButton fx:id="saveButton" layoutX="797.0" layoutY="442.0" prefHeight="51.0" prefWidth="130.0" text="Save">
+      <JFXButton fx:id="saveButton" layoutX="797.0" layoutY="442.0" onAction="#saveInformation" prefHeight="51.0" prefWidth="130.0" text="Save">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="clearButton" layoutX="276.0" layoutY="442.0" prefHeight="51.0" prefWidth="130.0" text="Clear">
+      <JFXButton fx:id="clearButton" layoutX="276.0" layoutY="442.0" onAction="#clearInformation" prefHeight="51.0" prefWidth="130.0" text="Clear">
          <font>
             <Font size="24.0" />
          </font>

@@ -7,6 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
     @FXML TextField areaTextField;
@@ -18,6 +22,9 @@ public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
     @FXML JFXRadioButton inProgressRadioButton;
     @FXML JFXCheckBox cornerCheckBox;
     @FXML JFXCheckBox mainRoadCheckBox;
+    private static final String url = "jdbc:mysql://localhost:3306/temporary";
+    private static final String username = "root";
+    private static final String password = "GravityFalls1708";
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
     }
@@ -36,7 +43,10 @@ public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
     }
 
     @Override
-    public void saveInformation(ActionEvent event) {
-
+    public void saveInformation(ActionEvent event) throws SQLException {
+        Connection connection = DriverManager.getConnection(url, username, password);
+        Statement statement = connection.createStatement();
+        String query = "Call Procedure whatever";
+        statement.execute(query);
     }
 }
