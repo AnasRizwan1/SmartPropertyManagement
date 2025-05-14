@@ -68,7 +68,7 @@ Text {
 
 }
 radio-Buttons{
--fx-font-family: "Roboto", Times, serif;}
+-fx-font-family: "Roboto", Times, serif;
     -fx-text-fill: white;}
 .date-picker-popup {
     -fx-background-color: #011b3c;
