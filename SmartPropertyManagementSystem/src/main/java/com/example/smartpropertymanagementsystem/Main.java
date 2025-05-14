@@ -7,6 +7,11 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ResourceBundle;
+
 public class Main extends Application {
     private static Stage primaryStage;
     public static void main(String[] args) {
@@ -32,4 +37,11 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+
+//    public void initialize(URL location, ResourceBundle resources) {
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        LocalDateTime now = LocalDateTime.now();
+//        dateTimeLabel.setText(formatter.format(now));
+//    }
+
 }

@@ -10,6 +10,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
+
+import javax.swing.text.LabelView;
+import java.awt.*;
 import java.io.IOException;
 
 public class Dashboard {
@@ -23,11 +26,15 @@ public class Dashboard {
     @FXML private Pane reportsPane;
     @FXML private Pane paymentPane;
 
+    @FXML
+    private Label dateTimeLabel;
+
     public void initialize(){
-        mainPane.setStyle("-fx-background-color: lightblue;");
-        addNewPane.setStyle("-fx-background-color: red;");
-        reportsPane.setStyle("-fx-background-color: #a54d2a;");
-        paymentPane.setStyle("-fx-background-color: black;");
+            mainPane.setStyle("-fx-background-color: #011b3c");
+
+//        addNewPane.setStyle("-fx-background-color: red;");
+//        reportsPane.setStyle("-fx-background-color: #a54d2a;");
+//        paymentPane.setStyle("-fx-background-color: black;");
     }
     public void slider(ActionEvent event){
         String fxid = ((Node) event.getSource()).getId();
@@ -41,7 +48,7 @@ public class Dashboard {
             slide(activePane, 0);
         if(slidingPane != activePane){
             activePane = slidingPane;
-            slide(slidingPane, 200);
+            slide(slidingPane, 205);
         } else
             activePane = null;
     }

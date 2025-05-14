@@ -22,14 +22,17 @@ public class LoginPage {
     @FXML private Text invalidPasswordText;
 
     public void login(ActionEvent event) throws IOException {
-        if(userNameField.getText().equals("admin") && passWordField.getText().equals("admin")) {
+//        if(userNameField.getText().equals("admin") && passWordField.getText().equals("admin")) {
+        if (true){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
             root = fxmlLoader.load();
             primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
             primaryStage.setTitle("Dashboard");
+            primaryStage.centerOnScreen();
             scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("ui/dashboard.css").toExternalForm());
             primaryStage.setScene(scene);
+            primaryStage.centerOnScreen();
             primaryStage.show();
         } else
             invalidPasswordText.setVisible(true);

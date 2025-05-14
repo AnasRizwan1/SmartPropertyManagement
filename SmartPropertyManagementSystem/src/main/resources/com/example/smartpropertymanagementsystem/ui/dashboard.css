@@ -1,4 +1,38 @@
 .button{
-    -fx-font-family: "Times New Roman", Times, serif;
-    -fx-font-size: 18;
+    -fx-font-family: "Roboto", Times, serif;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 40;
+    -fx-background-color: #eac79a;
+
+
+
+
+
+}
+.button:pressed {
+    -fx-background-color: #d94e1f; /* Slightly darker */
+    -fx-translate-y: 2; /* Button presses downward */
+    -fx-effect: dropshadow(gaussian, #0ff, 5, 0.3, 0, 0);
+}
+.button:selected {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}
+.button:hover {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}
+
+.pane-background {
+    -fx-background-color: #004593;
+}
+#logOutButton {
+    -fx-background-color: #74a5a5;
+    -fx-text-fill:white;
+    -fx-font-size: 16;
+    -fx-font-family: "Roboto", Times, serif;
+    -fx-effect: dropshadow(gaussian, #eac79a, 10, 0.5, 0, 0);
 }
