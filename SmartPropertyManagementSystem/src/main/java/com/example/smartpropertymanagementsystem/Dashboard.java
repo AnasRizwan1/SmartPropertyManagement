@@ -57,26 +57,29 @@ public class Dashboard {
         slideIn.setToX(coordinate);
         slideIn.play();
     }
+    String dashBoardCss = "ui/dashboard.css";
+    String formStyling= "ui/formStyling.css";
+    String styleCss = "ui/style.css";
     public void changeScene(ActionEvent event) throws IOException{
         String fxid = ((Node) event.getSource()).getId();
         switch(fxid){
-            case "plotButton" -> {loader(event, "addPlot.fxml");}
-            case "customerButton" -> {loader(event, "addCustomer.fxml");}
-            case "headButton" -> {loader(event, "addHead.fxml");}
-            case "incomeReportButton" -> {loader(event, "incomeReport.fxml");}
-            case "expenseReportButton" -> {loader(event, "expenseReport.fxml");}
-            case "customerLedgerButton" -> {loader(event, "customerLedger.fxml");}
-            case "addAdvanceButton" -> {loader(event, "addAdvance.fxml");}
-            case "addInstallmentButton" -> {loader(event, "addInstallment.fxml");}
-            case "confirmationButton" -> {loader(event, "confirmation.fxml");}
-            case "receiptButton" -> {loader(event, "receipt.fxml");}}
+            case "plotButton" -> {loader(event, "addPlot.fxml" , styleCss );}
+            case "customerButton" -> {loader(event, "addCustomer.fxml" ,styleCss );}
+            case "headButton" -> {loader(event, "addHead.fxml", styleCss);}
+            case "incomeReportButton" -> {loader(event, "incomeReport.fxml",styleCss);}
+            case "expenseReportButton" -> {loader(event, "expenseReport.fxml",styleCss);}
+            case "customerLedgerButton" -> {loader(event, "customerLedger.fxml",styleCss);}
+            case "addAdvanceButton" -> {loader(event, "addAdvance.fxml",styleCss);}
+            case "addInstallmentButton" -> {loader(event, "addInstallment.fxml",styleCss);}
+            case "confirmationButton" -> {loader(event, "confirmation.fxml", styleCss);}
+            case "receiptButton" -> {loader(event, "receipt.fxml" , styleCss);}}
     }
-    private void loader(ActionEvent event ,String fxmlFile) throws IOException{
+    private void loader(ActionEvent event ,String fxmlFile , String cssFile) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
         root = fxmlLoader.load();
         primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("ui/style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource(cssFile).toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

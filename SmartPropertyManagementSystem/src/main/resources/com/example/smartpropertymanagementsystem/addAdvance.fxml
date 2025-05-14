@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddAdvance">
    <children>
-      <Label layoutX="617.0" layoutY="26.0" text="Add Advance" />
+      <Label layoutX="538.0" layoutY="12.0" text="Add Advance">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="37.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No: " />
-      <TextField fx:id="plotNoTextField" layoutX="148.0" layoutY="94.0" />
-      <Text layoutX="35.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" />
-      <TextField fx:id="amountTextField" layoutX="146.0" layoutY="145.0" />
-      <Text layoutX="25.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiving Date: " />
-      <TextField fx:id="receivingDateTextField" layoutX="143.0" layoutY="210.0" />
-      <Text layoutX="45.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: Auto" />
-      <JFXButton fx:id="saveButton" layoutX="67.0" layoutY="342.0" text="Save" />
-      <JFXButton fx:id="clearButton" layoutX="247.0" layoutY="348.0" text="Clear" />
-      <Text layoutX="25.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount:" />
-      <TextField fx:id="paidAmountTextField" layoutX="143.0" layoutY="273.0" />
+      <Text layoutX="221.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot Number" wrappingWidth="138.77050781249994">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <TextField fx:id="plotNoTextField" layoutX="404.0" layoutY="156.0" prefHeight="34.0" prefWidth="196.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="220.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiving Date" wrappingWidth="138.7705078125">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="702.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID" wrappingWidth="391.5706787109375">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="439.0" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="443.0" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <Text layoutX="222.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount" wrappingWidth="138.7705078125">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <TextField fx:id="paidAmountTextField" layoutX="405.0" layoutY="219.0" prefHeight="34.0" prefWidth="199.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1191.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/LogoPng.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="701.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="138.77050781249994">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="personName" layoutX="898.0" layoutY="156.0" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="700.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Advance Amount" wrappingWidth="195.3038330078125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="totalAdvanceAmount" layoutX="898.0" layoutY="217.0" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <DatePicker fx:id="receivingDateTextField" layoutX="405.0" layoutY="287.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: blue;" />
+      <Text layoutX="699.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Amount" wrappingWidth="195.3038330078125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="pendingAmount" layoutX="897.0" layoutY="285.0" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
    </children>
 </AnchorPane>
