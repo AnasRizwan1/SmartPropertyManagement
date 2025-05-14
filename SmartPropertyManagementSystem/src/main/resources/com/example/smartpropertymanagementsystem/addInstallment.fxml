@@ -1,70 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddInstallment">
    <children>
-      <Label layoutX="286.0" layoutY="6.0" text="Add Installment" />
+      <Label layoutX="538.0" layoutY="12.0" text="Add Installment">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="37.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: Auto">
+      <TextField fx:id="plotNoTextField" layoutX="404.0" layoutY="154.0" prefHeight="34.0" prefWidth="196.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="paidAmountTextField" layoutX="405.0" layoutY="220.0" prefHeight="34.0" prefWidth="199.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <DatePicker fx:id="receivingDateTextField" layoutX="405.0" layoutY="291.0" prefHeight="34.0" prefWidth="198.0" />
+      <TextField fx:id="installmentNoTextField" layoutX="404.0" layoutY="368.0" prefHeight="36.0" prefWidth="201.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+
+      <JFXButton fx:id="saveButton" layoutX="949.0" layoutY="464.0" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <Text layoutX="702.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID : Auto" wrappingWidth="391.5706787109375">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="222.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Amount" wrappingWidth="138.7705078125">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="701.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="138.77050781249994">
+         <font>
+            <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="32.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+      <TextField fx:id="personName" layoutX="898.0" layoutY="154.0" prefHeight="34.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="700.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Advance Amount" wrappingWidth="195.3038330078125">
+         <font>
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="amountTextField" layoutX="158.0" layoutY="287.0">
+      <TextField fx:id="totalAdvanceAmount" layoutX="898.0" layoutY="218.0" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
          <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Text layoutX="37.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="220.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiving Date" wrappingWidth="138.7705078125">
          <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <TextField fx:id="receivingDateTextField" layoutX="157.0" layoutY="199.0">
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="699.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending Amount" wrappingWidth="195.3038330078125">
          <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Text layoutX="37.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot No:">
-         <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="plotNoTextField" layoutX="156.0" layoutY="127.0">
+      <TextField fx:id="pendingAmount" layoutX="897.0" layoutY="289.0" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: #81dff9;">
          <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Text layoutX="40.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment No:">
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="221.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot Number" wrappingWidth="138.77050781249994">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="221.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment Number" wrappingWidth="168.79946899414062">
+         <font>
+            <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="installmentNoTextField" layoutX="227.0" layoutY="373.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <JFXButton fx:id="saveButton" layoutX="115.0" layoutY="560.0" text="Save">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="clearButton" layoutX="295.0" layoutY="566.0" text="Clear">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </JFXButton>
+      <JFXButton fx:id="clearButton" layoutX="338.0" layoutY="468.0" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1191.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/LogoPng.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

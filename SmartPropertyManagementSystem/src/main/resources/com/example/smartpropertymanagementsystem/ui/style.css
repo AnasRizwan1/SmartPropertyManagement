@@ -13,15 +13,17 @@
 }
 
 .jfx-button {
-    -fx-background-color: #2196F3;
-    -fx-text-fill: white;
+    -fx-background-color: #eac79a;
+    -fx-text-fill: black;
     -fx-font-size: 14px;
     -fx-background-radius: 30;
     -fx-cursor: hand;
 }
 
 .jfx-button:hover {
-    -fx-background-color: #1976D2;
+    -fx-background-color: #f55f2a;
+        -fx-text-fill: white;
+        -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
 }
 
 #previousButton {
@@ -38,15 +40,49 @@
 }
 
 #previousButton:hover {
-    -fx-background-color: #1976D2;
+     -fx-background-color: #f55f2a;
+            -fx-text-fill: white;
+            -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
 }
-.label {
+.label{
     -fx-font-family: "Ariel", Times, serif;
-    -fx-font-size: 25px;
+    -fx-font-size: 30px;
     -fx-text-fill: white;
     -fx-bold: true;
     -fx-center-text: true;
     -fx-alignment: center;
     -fx-weight: bold;
     -fx-underline: true;
+}
+
+Text {
+    -fx-fill: white;
+    -fx-font-family: "Roboto", Times, serif;
+}
+#JFXRadioButton{
+    -fx-font-family: "Roboto", Times, serif;
+    fx-text-fill: white;
+}
+.text-field{
+ -fx-font-size: 20px;
+
+}
+radio-Buttons{
+-fx-font-family: "Roboto", Times, serif;}
+    -fx-text-fill: white;}
+.date-picker-popup {
+    -fx-background-color: #011b3c;
+}
+
+.date-picker-popup .calendar-grid {
+    -fx-background-color: #011b3c;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #011b3c;
+}
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: yellow; /* text color */
+    -fx-background-color: #1565c0; /* background color */
+    -fx-font-weight: bold;
 }

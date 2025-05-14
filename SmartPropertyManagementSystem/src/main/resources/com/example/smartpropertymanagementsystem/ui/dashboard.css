@@ -4,11 +4,7 @@
     -fx-background-radius: 20;
     -fx-padding: 10 40;
     -fx-background-color: #eac79a;
-
-
-
-
-
+    -fx-cursor: hand;
 }
 .button:pressed {
     -fx-background-color: #d94e1f; /* Slightly darker */

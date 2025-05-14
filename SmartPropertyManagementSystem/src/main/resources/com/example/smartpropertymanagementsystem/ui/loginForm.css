@@ -1,0 +1,19 @@
+.button{
+    -fx-font-family: "Roboto", Times, serif;
+    -fx-font-size: 16;
+    -fx-background-radius: 10;
+    -fx-padding: 10 40;
+    -fx-background-color: #74a5a5;
+    -fx-cursor: hand;
+}
+
+.button:selected {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}
+.button:hover {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}

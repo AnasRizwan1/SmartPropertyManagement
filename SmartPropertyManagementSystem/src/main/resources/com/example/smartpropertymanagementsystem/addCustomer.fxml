@@ -1,75 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddCustomer">
    <children>
-      <Label layoutX="612.0" layoutY="14.0" text="Add Customer" />
+      <Label layoutX="500.0" layoutY="7.0" text="Add Customer">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="37.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC:" wrappingWidth="69.07007217407227">
+      <Text layoutX="61.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC" wrappingWidth="169.07006454467773">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="CNICTextField" layoutX="248.0" layoutY="72.0" promptText="e.g 3520130873783">
+      <TextField fx:id="CNICTextField" layoutX="249.0" layoutY="172.0" prefHeight="40.0" prefWidth="298.0" promptText="e.g 3520130873783">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </TextField>
-      <Text layoutX="32.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" wrappingWidth="146.93671798706055">
+      <Text layoutX="61.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="169.0700645446778">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="fNameTextField" layoutX="251.0" layoutY="147.0">
+      <TextField fx:id="fNameTextField" layoutX="248.0" layoutY="259.0" prefHeight="40.0" prefWidth="298.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </TextField>
-      <Text layoutX="32.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name: " wrappingWidth="146.93671798706055">
+      <Text layoutX="646.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="178.93671798706055">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="lNameTextField" layoutX="251.0" layoutY="234.0">
+      <TextField fx:id="lNameTextField" layoutX="893.0" layoutY="260.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </TextField>
-      <Text layoutX="32.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: " wrappingWidth="146.93671798706055">
+      <Text layoutX="61.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="169.07006454467773">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="addressTextField" layoutX="251.0" layoutY="428.0" prefHeight="51.0" prefWidth="631.0">
+      <TextField fx:id="addressTextField" layoutX="244.0" layoutY="346.0" prefHeight="51.0" prefWidth="631.0">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </TextField>
-      <Text layoutX="42.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="146.93671798706055">
+      <Text layoutX="646.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="178.93671798706055">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="registrationDateTextField" layoutX="261.0" layoutY="323.0">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <JFXButton fx:id="saveButton" layoutX="105.0" layoutY="550.0" text="Save">
+      <JFXButton fx:id="saveButton" layoutX="960.0" layoutY="461.0" prefHeight="51.0" prefWidth="161.0" text="Save">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="clearButton" layoutX="285.0" layoutY="556.0" text="Clear">
+      <JFXButton fx:id="clearButton" layoutX="179.0" layoutY="459.0" prefHeight="51.0" prefWidth="147.0" text="Clear">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1187.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/LogoPng.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dateTextField" layoutX="893.0" layoutY="173.0" prefHeight="40.0" prefWidth="223.0" />
    </children>
 </AnchorPane>

@@ -29,7 +29,8 @@ public class Main extends Application {
     public static void showLoginForm() throws IOException {
         Parent root = FXMLLoader.load(Main.class.getResource("loginPage.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(Main.class.getResource("ui/buttonHover.css").toExternalForm());
+
+        scene.getStylesheets().add(Main.class.getResource("ui/loginForm.css").toExternalForm());
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Smart Property Management System");
