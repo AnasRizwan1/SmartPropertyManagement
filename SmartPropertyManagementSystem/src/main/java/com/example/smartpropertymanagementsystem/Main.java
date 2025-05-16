@@ -39,6 +39,8 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+
+
 //    public void initialize(URL location, ResourceBundle resources) {
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 //        LocalDateTime now = LocalDateTime.now();

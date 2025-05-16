@@ -1,3 +1,27 @@
+#chatBotButton{
+    -fx-background-color: #002146;
+
+    -fx-background-radius: 100;
+    -fx-padding: 0 0 0 0;
+}
+#chatBotButton:hover {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-translate-y : 5;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}
+#chatBotPane {
+    -fx-background-color: #C0C0C0;
+    -fx-border-color: black;
+    fx-background-radius: 0;
+    -fx-border-radius: 0 0 20 0;
+}
+#userPrompt{
+
+        -fx-border-color : black;
+        -fx-font-family: "Roboto", Times, serif;
+        -fx-font-size: 16;
+}
 .button{
     -fx-font-family: "Roboto", Times, serif;
     -fx-font-size: 16;
@@ -31,4 +55,10 @@
     -fx-font-size: 16;
     -fx-font-family: "Roboto", Times, serif;
     -fx-effect: dropshadow(gaussian, #eac79a, 10, 0.5, 0, 0);
+}
+#chatTopPane {
+    -fx-background-color: #a1011c;
+
+    -fx-background-radius: 0;
+
 }

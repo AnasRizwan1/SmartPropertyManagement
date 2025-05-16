@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.Dashboard">
    <children>
-      <ImageView fitHeight="712.0" fitWidth="1323.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fx:id="chatBotImage" fitHeight="712.0" fitWidth="1323.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../Pictures/dashboard.png" />
          </image>
@@ -27,7 +32,62 @@
             <Image url="@../Pictures/fullformLogo.png" />
          </image>
       </ImageView>
-      <StackPane fx:id="stackPane" alignment="CENTER_LEFT" layoutX="-1.0" layoutY="2.0" prefHeight="706.0" prefWidth="643.0">
+      <Button fx:id="chatBotButton" layoutX="966.0" layoutY="615.0" mnemonicParsing="false" onAction="#tapTriggerChatBot" prefHeight="43.0" prefWidth="49.0">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/ai.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <SplitPane fx:id="chatBotPane" layoutX="487.0" layoutY="708.0" orientation="VERTICAL" prefHeight="567.0" prefWidth="469.0">
+         <items>
+            <BorderPane prefHeight="492.0" prefWidth="432.0">
+               <bottom>
+                  <BorderPane prefHeight="83.0" prefWidth="368.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <ImageView fx:id="sendButton" fitHeight="41.0" fitWidth="46.0" onMouseClicked="#sendMessage" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../Pictures/sendButton.png" />
+                           </image>
+                        </ImageView>
+                     </right>
+                     <center>
+                        <JFXTextArea fx:id="userPrompt" prefHeight="74.0" prefWidth="326.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </bottom>
+               <top>
+                  <AnchorPane fx:id="chatTopPane" prefHeight="46.0" prefWidth="465.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/robot.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="58.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHAT BOT" wrappingWidth="155.73675537109375">
+                           <font>
+                              <Font name="Franklin Gothic Heavy" size="18.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+               </top>
+               <center>
+                  <ScrollPane fx:id="chatScrollContainer" hbarPolicy="NEVER" prefHeight="437.0" prefWidth="474.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="443.0">
+                           <children>
+                              <VBox fx:id="chatDisplayContainer" layoutY="1.0" prefHeight="420.0" prefWidth="445.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </items>
+      </SplitPane>
+      <StackPane fx:id="stackPane" alignment="CENTER_LEFT" layoutX="-1.0" layoutY="2.0" prefHeight="706.0" prefWidth="453.0">
          <children>
             <Pane fx:id="paymentPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="210.0" translateY="370.0" StackPane.alignment="TOP_LEFT">
                <children>
