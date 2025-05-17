@@ -16,9 +16,9 @@ public class AddCustomer implements sceneToDashboard, clearInfo, saveInfo {
     @FXML TextField lNameTextField;
     @FXML DatePicker registrationDatePicker;
     @FXML TextField addressTextField;
-    private static final String url = "jdbc:mysql://localhost:3306/temporary";
-    private static final String username = "root";
-    private static final String password = "password";
+    private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
+    private static final String username = "admin";
+    private static final String password = "d375c123";
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
     }

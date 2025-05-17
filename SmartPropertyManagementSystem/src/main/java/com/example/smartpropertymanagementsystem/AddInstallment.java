@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.sql.Connection;
 
 public class AddInstallment implements sceneToDashboard, clearInfo, saveInfo {
-    private static final String url = "jdbc:mysql://localhost:3306/temporary";
-    private static final String username = "root";
-    private static final String password = "password";
+    private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
+    private static final String username = "admin";
+    private static final String password = "d375c123";
     @FXML TextField plotNoTextField;
     @FXML TextField paidAmountTextField;
     @FXML TextField installmentNoTextField;

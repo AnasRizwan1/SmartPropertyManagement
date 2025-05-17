@@ -30,9 +30,9 @@ import java.util.stream.Collectors;
 public class Receipt implements sceneToDashboard, Initializable {
     private final JFXAutoCompletePopup<String> autoCompletePopup = new JFXAutoCompletePopup<>();
     private final ObservableList<String> allSuggestions = FXCollections.observableArrayList();
-    private static final String url =  "jdbc:mysql://localhost:3306/test";
-    private static final String user = "root";
-    private static final String password = "password";
+    private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
+    private static final String user = "admin";
+    private static final String password = "d375c123";
 
     @FXML Text searchByText;
     @FXML TextField searchByTextField;
@@ -50,7 +50,7 @@ public class Receipt implements sceneToDashboard, Initializable {
         try{
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
-            String query = "Select * From payment;";
+            String query = "Select * From ReceiptView;";
             initializeTreeTable(statement, query);
         } catch (SQLException e){
             System.out.println(e.getMessage());
@@ -95,9 +95,9 @@ public class Receipt implements sceneToDashboard, Initializable {
         autoCompletePopup.getSuggestions().clear();
         allSuggestions.clear();
         String query = switch (selected) {
-            case "Payment ID" -> "SELECT DISTINCT paymentID FROM payment";
-            case "Plot No" -> "SELECT DISTINCT plotNo FROM payment";
-            case "Name" -> "SELECT DISTINCT ownerName FROM payment";
+            case "Payment ID" -> "SELECT DISTINCT paymentID FROM ReceiptView";
+            case "Plot No" -> "SELECT DISTINCT plotNo FROM ReceiptView";
+            case "Name" -> "SELECT DISTINCT ownerName FROM ReceiptView";
             default -> "";
         };
         if (!query.isEmpty()) {
@@ -126,9 +126,9 @@ public class Receipt implements sceneToDashboard, Initializable {
         Connection connection = DriverManager.getConnection(url, user, password);
         Statement statement = connection.createStatement();
         String query = switch(searchByText.getText()){
-            case "Payment ID:" -> "SELECT * FROM payment WHERE paymentID = " + searchByTextField.getText();
-            case "Plot No:" -> "SELECT * FROM payment  WHERE plotNo = " + searchByTextField.getText();
-            case "Name:" -> "SELECT * FROM payment WHERE ownerName = \"" + searchByTextField.getText() + "\"";
+            case "Payment ID:" -> "SELECT * FROM ReceiptView WHERE paymentID = " + searchByTextField.getText();
+            case "Plot No:" -> "SELECT * FROM ReceiptView WHERE plotNo = " + searchByTextField.getText();
+            case "Name:" -> "SELECT * FROM ReceiptView WHERE ownerName = \"" + searchByTextField.getText() + "\"";
             default -> "";
         };
         initializeTreeTable(statement, query);
