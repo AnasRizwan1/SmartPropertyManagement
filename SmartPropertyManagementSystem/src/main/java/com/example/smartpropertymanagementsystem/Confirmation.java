@@ -31,7 +31,7 @@ public class Confirmation implements sceneToDashboard, Initializable {
     @FXML TreeTableColumn<ConfirmTable, Void> action;
     private static final String url = "jdbc:mysql://localhost:3306/temporary";
     private static final String username = "root";
-    private static final String password = "GravityFalls1708";
+    private static final String password = "password";
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
     }
