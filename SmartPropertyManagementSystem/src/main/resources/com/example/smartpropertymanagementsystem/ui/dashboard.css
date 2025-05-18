@@ -4,10 +4,16 @@
     -fx-background-radius: 100;
     -fx-padding: 0 0 0 0;
 }
-#chatBotButton:hover {
+#chatBotButton:hover{
     -fx-background-color: #f55f2a;
     -fx-text-fill: white;
     -fx-translate-y : 5;
+    -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
+}
+#minimizeButton:hover {
+    -fx-background-color: #f55f2a;
+    -fx-text-fill: white;
+    -fx-translate-x : -2;
     -fx-effect: dropshadow(gaussian, #0ff, 10, 0.5, 0, 0);
 }
 #chatBotPane {

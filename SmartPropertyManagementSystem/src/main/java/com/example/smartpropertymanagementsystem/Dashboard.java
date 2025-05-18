@@ -22,8 +22,8 @@ import javafx.util.Duration;
 import javafx.event.ActionEvent;
 import javafx.scene.image.ImageView;
 import  javafx.geometry.*;
+import javafx.scene.control.TextArea;
 
-import javax.swing.text.LabelView;
 import java.awt.*;
 
 import java.io.IOException;
@@ -34,7 +34,7 @@ public class Dashboard {
     private Stage primaryStage;
     private Parent root;
     @FXML
-    private JFXTextArea userPrompt;
+    private TextArea userPrompt;
     @FXML
     private ImageView sendButton;
     @FXML private ScrollPane chatBotScrollPane;
@@ -65,6 +65,16 @@ public class Dashboard {
     }
 
     public void tapTriggerChatBot(ActionEvent event){
+        if (check ){
+            chatBotPlaneSlide(chatBotPane, 0);
+            check = false;
+
+        } else {
+            chatBotPlaneSlide(chatBotPane, -585);
+            check = true;
+        }
+    }
+    public void minimizeChatBot(MouseEvent mouseEvent){
         if (check ){
             chatBotPlaneSlide(chatBotPane, 0);
             check = false;
