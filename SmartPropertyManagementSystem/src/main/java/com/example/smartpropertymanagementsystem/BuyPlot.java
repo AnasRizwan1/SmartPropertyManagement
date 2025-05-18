@@ -53,7 +53,18 @@ public class BuyPlot implements sceneToDashboard{
     void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure Whatever";
-        statement.execute(query);
+        int plan  = 0;
+        if(threeMonthRadioButton.isSelected())
+            plan = 3;
+        else if(threeYearRadioButton.isSelected())
+            plan = 36;
+        else if(twelveMonthRadioButton.isSelected())
+            plan = 12;
+        else if(sixMonthRadioButton.isSelected())
+            plan = 6;
+        String query = "Call BuyPlot('" + CNICTextField.getText() + "'," + Integer.parseInt(plotNoTextField.getText())
+                + "," + plan + ", STR_TO_DATE('" + installmentStartDateTextField.getValue().toString() + "', '%Y-%m-%d'))";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 }

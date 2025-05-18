@@ -34,7 +34,9 @@ public class AddCustomer implements sceneToDashboard, clearInfo, saveInfo {
     public void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure whatever";
-        statement.execute(query);
+        String query = "Call AddCustomer('" + CNICTextField.getText() + "','" + fNameTextField.getText() + "','" + lNameTextField.getText()
+                + "','" + addressTextField.getText() + "', STR_TO_DATE('" + registrationDatePicker.getValue().toString() + "', '%Y-%m-%d') ,'03264014407',null)";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 }

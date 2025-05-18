@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
+    @FXML TextField plotNoTextField;
     @FXML TextField areaTextField;
     @FXML TextField priceTextField;
     @FXML TextField addressTextField;
@@ -40,13 +41,31 @@ public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
         inProgressRadioButton.setSelected(false);
         cornerCheckBox.setSelected(false);
         mainRoadCheckBox.setSelected(false);
+        plotNoTextField.clear();
     }
 
     @Override
     public void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure whatever";
-        statement.execute(query);
+        String type = "";
+        if(cornerCheckBox.isSelected() && mainRoadCheckBox.isSelected())
+            type = "Corner and Main road";
+        else if(cornerCheckBox.isSelected())
+            type = "Corner";
+        else if(mainRoadCheckBox.isSelected())
+            type = "Main road";
+        String status = "";
+        if(ownedRadioButton.isSelected())
+            status = "owned";
+        else if(unOwnedRadioButton.isSelected())
+            status = "unowned";
+        else if(inProgressRadioButton.isSelected())
+            status = "incomplete";
+        String query = "Call AddPlot(" + Integer.parseInt(plotNoTextField.getText()) + "," +
+                Integer.parseInt(areaTextField.getText()) + "," + Integer.parseInt(priceTextField.getText())
+                + ",'" + type + "','" + status + "','" + addressTextField.getText() + "')";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 }

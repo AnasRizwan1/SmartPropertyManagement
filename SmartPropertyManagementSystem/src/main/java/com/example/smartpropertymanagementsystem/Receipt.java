@@ -126,8 +126,8 @@ public class Receipt implements sceneToDashboard, Initializable {
         Connection connection = DriverManager.getConnection(url, user, password);
         Statement statement = connection.createStatement();
         String query = switch(searchByText.getText()){
-            case "Payment ID:" -> "SELECT * FROM ReceiptView WHERE paymentID = " + searchByTextField.getText();
-            case "Plot No:" -> "SELECT * FROM ReceiptView WHERE plotNo = " + searchByTextField.getText();
+            case "Payment ID:" -> "SELECT * FROM ReceiptView WHERE paymentID = " + Integer.parseInt(searchByTextField.getText());
+            case "Plot No:" -> "SELECT * FROM ReceiptView WHERE plotNo = " + Integer.parseInt(searchByTextField.getText());
             case "Name:" -> "SELECT * FROM ReceiptView WHERE ownerName = \"" + searchByTextField.getText() + "\"";
             default -> "";
         };

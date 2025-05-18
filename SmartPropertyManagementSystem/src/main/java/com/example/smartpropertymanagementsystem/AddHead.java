@@ -33,7 +33,13 @@ public class AddHead implements sceneToDashboard, saveInfo, clearInfo {
     public void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure whatever";
-        statement.execute(query);
+        String type = "";
+        if(incomeRadioButton.isSelected())
+            type = "income";
+        else if(expenseRadioButton.isSelected())
+            type = "expense";
+        String query = "Call AddHead('" +  headTextField.getText() + "', '" + type + "')";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 }

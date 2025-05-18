@@ -38,7 +38,7 @@ public class ExpenseReport implements sceneToDashboard, Initializable {
         try{
             Connection connection =  DriverManager.getConnection(url,username,password);
             Statement statement = connection.createStatement();
-            String query = "Select * FROM Payment";
+            String query = "Select * FROM ExpenseReportView";
             InitializeTreeTable(statement, query);
         } catch (SQLException e){
             e.printStackTrace();
@@ -49,7 +49,8 @@ public class ExpenseReport implements sceneToDashboard, Initializable {
     public void search(ActionEvent event) throws SQLException{
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "SELECT * FROM Expenses WHERE date BETWEEN " + toDatePicker.getValue() + " AND " + fromDatePicker.getValue();
+        String query = "SELECT * FROM ExpenseReportView WHERE date BETWEEN STR_TO_DATE('" + fromDatePicker.getValue() + "', '%Y-%m-%d') AND STR_TO_DATE('" + toDatePicker.getValue() + "', '%Y-%m-%d')";
+        System.out.println(query);
         try{
             InitializeTreeTable(statement, query);
         } catch (SQLException e){

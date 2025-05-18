@@ -42,8 +42,10 @@ public class AddExpense implements sceneToDashboard {
     void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure Whatever";
-        statement.execute(query);
+        String query = "Call AddExpense(STR_TO_DATE('" + dateTextField.getValue().toString()
+                + "', '%Y-%m-%d'), '" + headNameTextField.getText() + "',"  + Integer.parseInt(amountTextField.getText()) + ")";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 
 }
