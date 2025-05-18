@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.AddExpense">
+   <children>
+      <Label layoutX="551.0" layoutY="9.0" prefHeight="54.0" prefWidth="247.0" text="Add Expense">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text fx:id="headName" layoutX="304.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Head Name" wrappingWidth="181.74922943115234">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="headNameTextField" layoutX="492.0" layoutY="169.0" prefHeight="51.0" prefWidth="340.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="saveButton" layoutX="797.0" layoutY="458.0" onAction="#saveInformation" prefHeight="51.0" prefWidth="130.0" text="Save">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearButton" layoutX="276.0" layoutY="458.0" onAction="#clearInformation" prefHeight="51.0" prefWidth="130.0" text="Clear">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1173.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/LogoPng.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="302.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Amount" wrappingWidth="196.9492416381836">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="amountTextField" layoutX="492.0" layoutY="243.0" prefHeight="51.0" prefWidth="340.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Text layoutX="305.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="120.14925384521484">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="dateTextField" layoutX="493.0" layoutY="321.0" prefHeight="51.0" prefWidth="340.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.BuyPlot">
+   <children>
+      <Label layoutX="563.0" layoutY="15.0" text="Buy Plot">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <TextField fx:id="advanceAmountTextField" layoutX="270.0" layoutY="367.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <JFXRadioButton fx:id="threeMonthRadioButton" layoutX="304.0" layoutY="278.0" prefHeight="35.0" prefWidth="152.0" text="3 Month" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="status" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="sixMonthRadioButton" layoutX="483.0" layoutY="279.0" prefHeight="35.0" prefWidth="160.0" text="6 Month" textFill="WHITE" toggleGroup="$status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="twelveMonthRadioButton" layoutX="683.0" layoutY="277.0" prefHeight="35.0" prefWidth="160.0" text="12 Month" textFill="WHITE" toggleGroup="$status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <Text layoutX="123.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNIC" wrappingWidth="170.546875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="CNICTextField" layoutX="268.0" layoutY="174.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="saveButton" layoutX="988.0" layoutY="506.0" onAction="#saveInformation" prefHeight="42.0" prefWidth="126.0" text="Save" />
+      <JFXButton fx:id="clearButton" layoutX="130.0" layoutY="506.0" onAction="#clearInformation" prefHeight="42.0" prefWidth="126.0" text="Clear" />
+      <ImageView fitHeight="90.0" fitWidth="77.0" layoutX="1191.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/LogoPng.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="646.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plot Number">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="plotNoTextField" layoutX="811.0" layoutY="172.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="68.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment Plan" wrappingWidth="170.546875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="66.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advance Amount" wrappingWidth="202.70108032226562">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="643.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment Start-Date" wrappingWidth="152.02581024169922">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXRadioButton fx:id="threeYearRadioButton" layoutX="924.0" layoutY="275.0" prefHeight="35.0" prefWidth="160.0" text="3 Year" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="status1" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <DatePicker fx:id="installmentStartDateTextField" layoutX="812.0" layoutY="364.0" prefHeight="51.0" prefWidth="298.0" />
+   </children>
+</AnchorPane>

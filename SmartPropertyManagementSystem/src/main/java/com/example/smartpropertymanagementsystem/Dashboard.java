@@ -50,7 +50,11 @@ public class Dashboard {
     private SplitPane chatBotPane;
     @FXML private Label dateTimeLabel;
     boolean check = false;
+    @FXML
+    private Button addExpense;
 
+    @FXML
+    private Button addIncome;
     public void initialize(){
             mainPane.setStyle("-fx-background-color: #011b3c");
 
@@ -153,7 +157,12 @@ public class Dashboard {
             case "addAdvanceButton" -> {loader(event, "addAdvance.fxml",styleCss);}
             case "addInstallmentButton" -> {loader(event, "addInstallment.fxml",styleCss);}
             case "confirmationButton" -> {loader(event, "confirmation.fxml", styleCss);}
-            case "receiptButton" -> {loader(event, "receipt.fxml" , styleCss);}}
+            case "receiptButton" -> {loader(event, "receipt.fxml" , styleCss);}
+            case "addExpense" -> {loader(event, "addExpense.fxml" , styleCss);}
+            case "addIncome" -> {loader(event, "addIncome.fxml" , styleCss);}
+            case "buyPlot" -> {loader(event, "buyPlot.fxml" , styleCss);}
+            case "newUser" -> {loader(event, "newUser.fxml" , styleCss);}
+        }
     }
     private void loader(ActionEvent event ,String fxmlFile , String cssFile) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));

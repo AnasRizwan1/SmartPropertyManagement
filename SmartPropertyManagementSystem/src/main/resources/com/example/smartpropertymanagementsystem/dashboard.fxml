@@ -152,6 +152,30 @@
                </children></Pane>
             <Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="211.0">
                <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addExpense" layoutX="5.0" layoutY="439.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Add Expense">
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addIncome" layoutX="4.0" layoutY="508.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Add Income">
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="80.0" fitWidth="98.0" layoutX="59.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/loggedInPerson.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="loginUserName" fill="WHITE" layoutX="5.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin" textAlignment="CENTER" wrappingWidth="186.5164737701416">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
                   <Button fx:id="addNewButton" layoutX="5.0" layoutY="230.0" mnemonicParsing="false" onAction="#slider" prefHeight="60.0" prefWidth="200.0" text="Add New">
                      <font>
                         <Font name="Calibri" size="24.0" />
@@ -167,16 +191,16 @@
                         <Font name="Calibri" size="24.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="80.0" fitWidth="98.0" layoutX="70.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Pictures/loggedInPerson.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="loginUserName" fill="WHITE" layoutX="18.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin" textAlignment="CENTER" wrappingWidth="186.5164737701416">
+                  <Button fx:id="buyPlot" layoutX="5.0" layoutY="582.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="Buy Plot">
                      <font>
-                        <Font size="19.0" />
+                        <Font name="Calibri" size="24.0" />
                      </font>
-                  </Text>
+                  </Button>
+                  <Button fx:id="newUser" layoutX="6.0" layoutY="160.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="60.0" prefWidth="200.0" text="New User">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
          </children>
