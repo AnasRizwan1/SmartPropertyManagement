@@ -42,7 +42,7 @@ public class Receipt implements sceneToDashboard, Initializable {
     @FXML TreeTableColumn<ReceiptTable,String> paymentTypeColumn;
     @FXML TreeTableColumn<ReceiptTable,Integer> amountColumn;
     @FXML TreeTableColumn<ReceiptTable,String> ownerNameColumn;
-    @FXML TreeTableColumn<ReceiptTable,Integer> ownerCNICColumn;
+    @FXML TreeTableColumn<ReceiptTable,String> ownerCNICColumn;
     @FXML TreeTableColumn<ReceiptTable,Integer> installmentNoColumn;
     @FXML TreeTableColumn<ReceiptTable,Integer> plotNoColumn;
 
@@ -142,14 +142,14 @@ public class Receipt implements sceneToDashboard, Initializable {
         while(resultSet.next()){
             observableList.add(new ReceiptTable(resultSet.getInt("paymentID"),
                     resultSet.getInt("plotNo"), resultSet.getString("ownerName"),
-                    resultSet.getInt("ownerCNIC"), resultSet.getString("paymentType"),
+                    resultSet.getString("ownerCNIC"), resultSet.getString("paymentType"),
                     resultSet.getInt("installmentNo"), resultSet.getInt("amount")));
         }
         paymentIDColumn.setCellValueFactory(param -> param.getValue().getValue().paymentIDProperty().asObject());
         plotNoColumn.setCellValueFactory(param -> param.getValue().getValue().plotNoProperty().asObject());
         amountColumn.setCellValueFactory(param -> param.getValue().getValue().amountProperty().asObject());
         ownerNameColumn.setCellValueFactory(param -> param.getValue().getValue().ownerNameProperty());
-        ownerCNICColumn.setCellValueFactory(param -> param.getValue().getValue().CNICProperty().asObject());
+        ownerCNICColumn.setCellValueFactory(param -> param.getValue().getValue().CNICProperty());
         paymentTypeColumn.setCellValueFactory(param -> param.getValue().getValue().paymentTypeProperty());
         installmentNoColumn.setCellValueFactory(param -> param.getValue().getValue().installmentNoProperty().asObject());
         TreeItem<ReceiptTable> root = new RecursiveTreeItem<>(observableList, RecursiveTreeObject::getChildren);
@@ -162,16 +162,16 @@ class ReceiptTable extends RecursiveTreeObject<ReceiptTable> {
     private final IntegerProperty paymentID;
     private final IntegerProperty plotNo;
     private final StringProperty ownerName;
-    private final IntegerProperty CNIC;
+    private final StringProperty CNIC;
     private final StringProperty paymentType;
     private final IntegerProperty installmentNo;
     private final IntegerProperty amount;
 
-    ReceiptTable(Integer paymentID, Integer plotNo, String ownerName, Integer CNIC, String paymentType, Integer installmentNo, Integer amount) {
+    ReceiptTable(Integer paymentID, Integer plotNo, String ownerName, String CNIC, String paymentType, Integer installmentNo, Integer amount) {
         this.paymentID = new SimpleIntegerProperty(paymentID);
         this.plotNo = new SimpleIntegerProperty(plotNo);
         this.ownerName = new SimpleStringProperty(ownerName);
-        this.CNIC = new SimpleIntegerProperty(CNIC);
+        this.CNIC = new SimpleStringProperty(CNIC);
         this.paymentType = new SimpleStringProperty(paymentType);
         this.installmentNo = new SimpleIntegerProperty(installmentNo);
         this.amount = new SimpleIntegerProperty(amount);
@@ -179,7 +179,7 @@ class ReceiptTable extends RecursiveTreeObject<ReceiptTable> {
     public IntegerProperty paymentIDProperty() {return paymentID;}
     public IntegerProperty plotNoProperty() {return plotNo;}
     public StringProperty ownerNameProperty() {return ownerName;}
-    public IntegerProperty CNICProperty() {return CNIC;}
+    public StringProperty CNICProperty() {return CNIC;}
     public StringProperty paymentTypeProperty() {return paymentType;}
     public IntegerProperty installmentNoProperty() {return installmentNo;}
     public IntegerProperty amountProperty() {return amount;}

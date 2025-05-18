@@ -33,7 +33,8 @@ public class AddInstallment implements sceneToDashboard, clearInfo, saveInfo {
     public void saveInformation(ActionEvent event) throws SQLException {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement statement = connection.createStatement();
-        String query = "Call Procedure whatever";
-        statement.execute(query);
+        String query = "Call AddInstallment(" + Integer.parseInt(plotNoTextField.getText()) + "," + Integer.parseInt(paidAmountTextField.getText()) + ", STR_TO_DATE('" + receivingDatePicker.getValue().toString() + "', '%Y-%m-%d'))";
+        System.out.println(query);
+        statement.executeQuery(query);
     }
 }

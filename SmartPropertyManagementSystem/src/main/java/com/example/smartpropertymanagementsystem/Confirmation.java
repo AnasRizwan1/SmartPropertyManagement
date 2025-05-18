@@ -41,7 +41,7 @@ public class Confirmation implements sceneToDashboard, Initializable {
         try{
             Connection connection = DriverManager.getConnection(url, username, password);
             Statement statement = connection.createStatement();
-            String query = "Call Procedure whatever";
+            String query = "SELECT * FROM ConfirmationView";
             ResultSet resultSet = statement.executeQuery(query);
             ObservableList<ConfirmTable> observableList = FXCollections.observableArrayList();
             while (resultSet.next())
