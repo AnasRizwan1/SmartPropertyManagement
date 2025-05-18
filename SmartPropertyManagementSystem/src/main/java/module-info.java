@@ -8,6 +8,7 @@ module com.example.smartpropertymanagementsystem {
     requires java.sql;
     requires com.jfoenix;
     requires mysql.connector.j;
+    requires com.google.gson;
 
     opens com.example.smartpropertymanagementsystem to javafx.fxml;
     exports com.example.smartpropertymanagementsystem;

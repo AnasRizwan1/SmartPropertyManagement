@@ -1,17 +1,26 @@
 package com.example.smartpropertymanagementsystem;
 
-public class Gemini {
+import javafx.application.Platform;
 
-    public static String callGemini(String userMessage) {
-        String response = "";
-        try {
-            // Simulate a call to the Gemini API
-            response = "Gemini response to: " + userMessage;
-        } catch (Exception e) {
-            e.printStackTrace();
-    }
-        return response;
-    }
+public class Gemini {
+//
+//    public static String callGemini(String userMessage) {
+//        String response = "";
+//        try {
+//
+//            new Thread(() -> {
+//                String geminiResponse = GeminiApi.sendPromptToGemini(userMessage);
+//
+//                // Update UI on JavaFX Application Thread
+//                Platform.runLater(() -> response);
+//            }).start();
+//            response = GeminiApi.sendPromptToGemini(userMessage);
+//            ;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//    }
+//        return response;
+//    }
 
 
 }

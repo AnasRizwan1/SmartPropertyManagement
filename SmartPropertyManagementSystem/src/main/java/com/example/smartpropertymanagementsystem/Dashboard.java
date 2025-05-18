@@ -119,8 +119,10 @@ public class Dashboard {
             displayUserPrompt(message);
             userPrompt.clear();
 
-            String geminiResponse = Gemini.callGemini(message);
-            displayGeminiPrompt(geminiResponse);
+            GeminiApi.getGeminiResponse(message, response -> {
+                displayGeminiPrompt(response);
+            });
+
 
 
 
