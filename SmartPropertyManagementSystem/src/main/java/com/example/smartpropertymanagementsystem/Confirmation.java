@@ -108,46 +108,4 @@ class ConfirmTable extends RecursiveTreeObject<ConfirmTable> {
     public IntegerProperty paidAmountProperty() {
         return paidAmount;
     }
-
 }
-/*@Override
-    public void initialize(URL urrl, ResourceBundle resourceBundle) {
-        try{
-            Connection connection = DriverManager.getConnection(url, username, password);
-            Statement statement = connection.createStatement();
-            String query = "select * from plot";
-            ResultSet resultSet = statement.executeQuery(query);
-            ObservableList<tempClass> observableList = FXCollections.observableArrayList();
-            while (resultSet.next()) {
-                observableList.add(new tempClass(resultSet.getInt("plotNo"), resultSet.getInt("area")));
-            }
-            System.out.println("Rows fetched: "  + observableList.size());
-            plotNo.setCellValueFactory(param -> param.getValue().getValue().plotNoProperty().asObject());
-            area.setCellValueFactory(param -> param.getValue().getValue().areaProperty().asObject());
-            TreeItem<tempClass> root = new RecursiveTreeItem<tempClass>(observableList, RecursiveTreeObject::getChildren);
-            treeTableView.setRoot(root);
-            treeTableView.setShowRoot(false);
-        }catch (SQLException e){
-            e.getMessage();
-        }
-    }
-}
-
-class tempClass extends RecursiveTreeObject<tempClass> {
-    private final IntegerProperty plotNo;
-    private final IntegerProperty area;
-
-    public tempClass(Integer plotNo, Integer area) {
-        this.plotNo = new SimpleIntegerProperty(plotNo);
-        this.area = new SimpleIntegerProperty(area);
-    }
-
-    public IntegerProperty plotNoProperty() {
-        return plotNo;
-    }
-
-    public IntegerProperty areaProperty() {
-        return area;
-    }
-}
-*/

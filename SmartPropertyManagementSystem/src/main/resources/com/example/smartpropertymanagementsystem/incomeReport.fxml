@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.IncomeReport">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.IncomeReport">
    <children>
       <Label layoutX="272.0" layoutY="6.0" text="Income Report" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
+      <Text layoutX="47.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:" />
+      <JFXTreeTableView fx:id="treeTableView" layoutX="77.0" layoutY="231.0" prefHeight="400.0" prefWidth="635.0">
+         <columns>
+            <TreeTableColumn fx:id="incomeIDColumn" prefWidth="135.19998168945312" text="Income ID" />
+            <TreeTableColumn fx:id="headColumn" prefWidth="205.6000518798828" text="Head" />
+            <TreeTableColumn fx:id="amountColumn" prefWidth="163.199951171875" text="Amount" />
+            <TreeTableColumn fx:id="dateColumn" prefWidth="129.5999633789063" text="Date" />
+         </columns>
+      </JFXTreeTableView>
+      <Text layoutX="54.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" />
+      <DatePicker fx:id="fromDatePicker" layoutX="102.0" layoutY="73.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="102.0" layoutY="130.0" />
+      <JFXButton fx:id="searchButton" layoutX="102.0" layoutY="177.0" onAction="#search" text="Search" />
    </children>
 </AnchorPane>

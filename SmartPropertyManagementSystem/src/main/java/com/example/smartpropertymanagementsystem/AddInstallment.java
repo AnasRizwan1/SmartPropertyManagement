@@ -16,6 +16,7 @@ public class AddInstallment implements sceneToDashboard, clearInfo, saveInfo {
     @FXML TextField paidAmountTextField;
     @FXML TextField installmentNoTextField;
     @FXML DatePicker receivingDatePicker;
+
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
     }

@@ -8,6 +8,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AddIncome implements sceneToDashboard {
 
@@ -32,19 +36,28 @@ public class AddIncome implements sceneToDashboard {
     @FXML
     private JFXButton saveButton;
 
-    @FXML
+
+    private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
+    private static final String username = "admin";
+    private static final String password = "d375c123";
+
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
     }
 
     @FXML
     void clearInformation(ActionEvent event) {
-
+        headNameTextField.clear();
+        amountTextField.clear();
+        dateTextField.setValue(null);
     }
 
     @FXML
-    void saveInformation(ActionEvent event) {
-
+    void saveInformation(ActionEvent event) throws SQLException {
+        Connection connection = DriverManager.getConnection(url, username, password);
+        Statement statement = connection.createStatement();
+        String query = "Call Procedure Whatever";
+        statement.execute(query);
     }
 
 }

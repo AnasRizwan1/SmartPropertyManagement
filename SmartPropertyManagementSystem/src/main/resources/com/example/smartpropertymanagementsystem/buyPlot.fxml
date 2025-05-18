@@ -84,10 +84,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXRadioButton fx:id="threeYearRadioButton" layoutX="924.0" layoutY="275.0" prefHeight="35.0" prefWidth="160.0" text="3 Year" textFill="WHITE">
-         <toggleGroup>
-            <ToggleGroup fx:id="status1" />
-         </toggleGroup>
+      <JFXRadioButton fx:id="threeYearRadioButton" layoutX="924.0" layoutY="275.0" prefHeight="35.0" prefWidth="160.0" text="3 Year" textFill="WHITE" toggleGroup="$status">
          <font>
             <Font size="24.0" />
          </font>
