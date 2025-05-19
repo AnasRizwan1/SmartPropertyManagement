@@ -27,18 +27,18 @@
             <Font size="24.0" />
          </font></Text>
       <TextField fx:id="searchByTextField" layoutX="231.0" layoutY="122.0" />
-      <JFXTreeTableView fx:id="treeTableView" layoutX="94.0" layoutY="245.0" prefHeight="316.0" prefWidth="706.0">
+      <JFXTreeTableView fx:id="treeTableView" layoutX="63.0" layoutY="245.0" prefHeight="316.0" prefWidth="1142.0">
          <columns>
-            <TreeTableColumn fx:id="paymentIDColumn" text="Payment ID" />
-            <TreeTableColumn fx:id="plotNoColumn" prefWidth="90.39999389648438" text="Plot No" />
-            <TreeTableColumn fx:id="ownerNameColumn" minWidth="2.39996337890625" prefWidth="114.39997863769531" text="Owner Name" />
-            <TreeTableColumn fx:id="ownerCNICColumn" prefWidth="104.0" text="Owner CNIC" />
-            <TreeTableColumn fx:id="paymentTypeColumn" prefWidth="104.00001525878906" text="Payment Type" />
-            <TreeTableColumn fx:id="installmentNoColumn" prefWidth="120.00006103515625" text="Installment No" />
-            <TreeTableColumn fx:id="amountColumn" prefWidth="90.39998779296877" text="Amount" />
+            <TreeTableColumn fx:id="paymentIDColumn" prefWidth="116.79995346069336" text="Payment ID" />
+            <TreeTableColumn fx:id="plotNoColumn" prefWidth="125.60005187988281" text="Plot No" />
+            <TreeTableColumn fx:id="ownerNameColumn" minWidth="2.39996337890625" prefWidth="144.800048828125" text="Owner Name" />
+            <TreeTableColumn fx:id="ownerCNICColumn" prefWidth="205.60003662109375" text="Owner CNIC" />
+            <TreeTableColumn fx:id="paymentTypeColumn" prefWidth="195.199951171875" text="Payment Type" />
+            <TreeTableColumn fx:id="installmentNoColumn" prefWidth="150.39996337890625" text="Installment No" />
+            <TreeTableColumn fx:id="amountColumn" prefWidth="207.199951171875" text="Amount" />
          </columns>
       </JFXTreeTableView>
       <JFXButton fx:id="searchButton" layoutX="126.0" layoutY="190.0" onAction="#search" text="Search" />
-      <JFXButton layoutX="126.0" layoutY="620.0" text="Print" />
+      <JFXButton layoutX="1129.0" layoutY="584.0" prefHeight="40.0" prefWidth="70.0" text="Print" />
    </children>
 </AnchorPane>
