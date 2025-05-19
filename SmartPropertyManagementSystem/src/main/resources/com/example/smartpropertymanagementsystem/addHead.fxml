@@ -57,5 +57,10 @@
             <Image url="@../Pictures/LogoPng.png" />
          </image>
       </ImageView>
+      <Text fx:id="successfulText" layoutX="503.0" layoutY="603.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Added Successfully!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

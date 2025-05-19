@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
 
 import javax.swing.plaf.nimbus.State;
 import java.io.IOException;
@@ -29,6 +30,7 @@ public class BuyPlot implements sceneToDashboard{
     @FXML private JFXRadioButton threeMonthRadioButton;
     @FXML private JFXRadioButton threeYearRadioButton;
     @FXML private JFXRadioButton twelveMonthRadioButton;
+    @FXML private Text successfulText;
 
     private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
     private static final String username = "admin";
@@ -66,5 +68,7 @@ public class BuyPlot implements sceneToDashboard{
                 + "," + plan + ", STR_TO_DATE('" + installmentStartDateTextField.getValue().toString() + "', '%Y-%m-%d'))";
         System.out.println(query);
         statement.executeQuery(query);
+        successfulText.setVisible(true);
+        clearInformation(event);
     }
 }

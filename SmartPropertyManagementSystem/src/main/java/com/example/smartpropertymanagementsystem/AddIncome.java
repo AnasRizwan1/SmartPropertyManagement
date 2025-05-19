@@ -15,26 +15,15 @@ import java.sql.Statement;
 
 public class AddIncome implements sceneToDashboard {
 
-    @FXML
-    private TextField amountTextField;
+    @FXML private TextField amountTextField;
+    @FXML private JFXButton clearButton;
+    @FXML private DatePicker dateTextField;
+    @FXML private Text headName;
+    @FXML private TextField headNameTextField;
+    @FXML private JFXButton previousButton;
+    @FXML private JFXButton saveButton;
+    @FXML private Text successfulText;
 
-    @FXML
-    private JFXButton clearButton;
-
-    @FXML
-    private DatePicker dateTextField;
-
-    @FXML
-    private Text headName;
-
-    @FXML
-    private TextField headNameTextField;
-
-    @FXML
-    private JFXButton previousButton;
-
-    @FXML
-    private JFXButton saveButton;
 
 
     private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
@@ -60,6 +49,8 @@ public class AddIncome implements sceneToDashboard {
                 + "', '%Y-%m-%d'), '" + headNameTextField.getText() + "',"  + Integer.parseInt(amountTextField.getText()) + ")";
         System.out.println(query);
         statement.executeQuery(query);
+        successfulText.setVisible(true);
+        clearInformation(event);
     }
 
 }

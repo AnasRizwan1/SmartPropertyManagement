@@ -20,8 +20,7 @@ public class AddExpense implements sceneToDashboard {
     @FXML private DatePicker dateTextField;
     @FXML private Text headName;
     @FXML private TextField headNameTextField;
-    @FXML private JFXButton previousButton;
-    @FXML private JFXButton saveButton;
+    @FXML private Text successfulText;
 
     private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
     private static final String username = "admin";
@@ -46,6 +45,7 @@ public class AddExpense implements sceneToDashboard {
                 + "', '%Y-%m-%d'), '" + headNameTextField.getText() + "',"  + Integer.parseInt(amountTextField.getText()) + ")";
         System.out.println(query);
         statement.executeQuery(query);
+        successfulText.setVisible(true);
+        clearInformation(event);
     }
-
 }

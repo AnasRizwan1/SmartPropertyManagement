@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXRadioButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -23,6 +24,7 @@ public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
     @FXML JFXRadioButton inProgressRadioButton;
     @FXML JFXCheckBox cornerCheckBox;
     @FXML JFXCheckBox mainRoadCheckBox;
+    @FXML Text successfulText;
     private static final String url =  "jdbc:mysql://smartpropertymanagementsystem.cdsoew0qk2pc.ap-south-1.rds.amazonaws.com:3306/spms";
     private static final String username = "admin";
     private static final String password = "d375c123";
@@ -67,5 +69,7 @@ public class AddPlot implements sceneToDashboard,clearInfo, saveInfo {
                 + ",'" + type + "','" + status + "','" + addressTextField.getText() + "')";
         System.out.println(query);
         statement.executeQuery(query);
+        successfulText.setVisible(true);
+        clearInformation(event);
     }
 }

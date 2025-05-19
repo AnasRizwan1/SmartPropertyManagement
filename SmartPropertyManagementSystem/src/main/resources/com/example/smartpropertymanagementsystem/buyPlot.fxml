@@ -90,5 +90,10 @@
          </font>
       </JFXRadioButton>
       <DatePicker fx:id="installmentStartDateTextField" layoutX="812.0" layoutY="364.0" prefHeight="51.0" prefWidth="298.0" />
+      <Text fx:id="successfulText" layoutX="496.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Added Successfully!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

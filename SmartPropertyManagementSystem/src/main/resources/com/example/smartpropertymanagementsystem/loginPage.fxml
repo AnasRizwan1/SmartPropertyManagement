@@ -36,7 +36,7 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="passWordField" layoutX="248.0" layoutY="310.0" prefHeight="34.0" prefWidth="219.0" promptText="Password">
+      <PasswordField fx:id="passwordField" layoutX="248.0" layoutY="310.0" prefHeight="34.0" prefWidth="219.0" promptText="Password">
          <font>
             <Font size="14.0" />
          </font>

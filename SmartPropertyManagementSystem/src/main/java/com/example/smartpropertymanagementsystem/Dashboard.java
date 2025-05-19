@@ -17,6 +17,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
@@ -33,31 +34,25 @@ public class Dashboard {
     private Scene scene;
     private Stage primaryStage;
     private Parent root;
-    @FXML
-    private TextArea userPrompt;
-    @FXML
+    boolean check = false;
     private ImageView sendButton;
+    @FXML private TextArea userPrompt;
     @FXML private ScrollPane chatBotScrollPane;
     @FXML private VBox chatDisplayContainer;
     @FXML private Pane mainPane;
     @FXML private Pane addNewPane;
     @FXML private Pane reportsPane;
     @FXML private Pane paymentPane;
-    @FXML
-    private Button chatBotButton;
-
-    @FXML
-    private SplitPane chatBotPane;
+    @FXML private Button chatBotButton;
+    @FXML private SplitPane chatBotPane;
     @FXML private Label dateTimeLabel;
-    boolean check = false;
-    @FXML
-    private Button addExpense;
+    @FXML private Text loginUserName;
+    @FXML private Button addExpense;
 
     @FXML
     private Button addIncome;
     public void initialize(){
             mainPane.setStyle("-fx-background-color: #011b3c");
-
 
 //        addNewPane.setStyle("-fx-background-color: red;");
 //        reportsPane.setStyle("-fx-background-color: #a54d2a;");
@@ -194,5 +189,7 @@ public class Dashboard {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
+    public void setUser(String username){
+        loginUserName.setText(username);
+    }
 }

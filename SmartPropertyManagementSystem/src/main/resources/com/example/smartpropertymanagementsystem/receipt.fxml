@@ -7,17 +7,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.Receipt">
    <children>
-      <Label layoutX="286.0" layoutY="6.0" text="Receipt" />
+      <Label layoutX="591.0" layoutY="9.0" text="Receipt">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="76.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By:" />
-      <JFXComboBox fx:id="searchByComboBox" layoutX="152.0" layoutY="72.0" onAction="#ComboBoxSelection" prefHeight="26.0" prefWidth="119.0" />
-      <Text fx:id="searchByText" layoutX="67.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: " />
-      <TextField fx:id="searchByTextField" layoutX="152.0" layoutY="128.0" />
-      <JFXTreeTableView fx:id="treeTableView" layoutX="94.0" layoutY="245.0" prefHeight="400.0" prefWidth="705.0">
+      <Text layoutX="76.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By:">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <JFXComboBox fx:id="searchByComboBox" layoutX="246.0" layoutY="66.0" onAction="#ComboBoxSelection" prefHeight="26.0" prefWidth="119.0" />
+      <Text fx:id="searchByText" layoutX="67.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID: ">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <TextField fx:id="searchByTextField" layoutX="231.0" layoutY="122.0" />
+      <JFXTreeTableView fx:id="treeTableView" layoutX="94.0" layoutY="245.0" prefHeight="316.0" prefWidth="706.0">
          <columns>
             <TreeTableColumn fx:id="paymentIDColumn" text="Payment ID" />
             <TreeTableColumn fx:id="plotNoColumn" prefWidth="90.39999389648438" text="Plot No" />
@@ -29,5 +39,6 @@
          </columns>
       </JFXTreeTableView>
       <JFXButton fx:id="searchButton" layoutX="126.0" layoutY="190.0" onAction="#search" text="Search" />
+      <JFXButton layoutX="126.0" layoutY="620.0" text="Print" />
    </children>
 </AnchorPane>

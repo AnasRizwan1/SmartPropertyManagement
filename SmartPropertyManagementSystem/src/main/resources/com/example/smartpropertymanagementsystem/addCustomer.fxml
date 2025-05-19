@@ -62,12 +62,12 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXButton fx:id="saveButton" layoutX="960.0" layoutY="461.0" onAction="#saveInformation" prefHeight="51.0" prefWidth="161.0" text="Save">
+      <JFXButton fx:id="saveButton" layoutX="960.0" layoutY="520.0" onAction="#saveInformation" prefHeight="51.0" prefWidth="161.0" text="Save">
          <font>
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="clearButton" layoutX="179.0" layoutY="459.0" onAction="#clearInformation" prefHeight="51.0" prefWidth="147.0" text="Clear">
+      <JFXButton fx:id="clearButton" layoutX="179.0" layoutY="518.0" onAction="#clearInformation" prefHeight="51.0" prefWidth="147.0" text="Clear">
          <font>
             <Font size="24.0" />
          </font>
@@ -78,5 +78,30 @@
          </image>
       </ImageView>
       <DatePicker fx:id="registrationDatePicker" layoutX="893.0" layoutY="173.0" prefHeight="40.0" prefWidth="223.0" />
+      <Text fx:id="successfulText" layoutX="482.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Added Successfully!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="61.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No 1" wrappingWidth="169.07006454467773">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="phoneNo1TextField" layoutX="244.0" layoutY="443.0" prefHeight="40.0" prefWidth="298.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="640.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No 2" wrappingWidth="178.93671798706055">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="phoneNo2TextField" layoutX="855.0" layoutY="442.0" prefHeight="40.0" prefWidth="298.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

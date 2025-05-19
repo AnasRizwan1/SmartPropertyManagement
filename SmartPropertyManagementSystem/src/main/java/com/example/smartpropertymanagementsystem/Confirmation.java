@@ -1,5 +1,6 @@
 package com.example.smartpropertymanagementsystem;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import com.jfoenix.controls.RecursiveTreeItem;
@@ -13,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableRow;
 import javafx.scene.control.TreeTableView;
 
 import java.sql.*;
@@ -56,11 +58,23 @@ public class Confirmation implements sceneToDashboard, Initializable {
             paidAmountColumn.setCellValueFactory(param -> param.getValue().getValue().paidAmountProperty().asObject());
             // Add button column
             action.setCellFactory(param -> new javafx.scene.control.TreeTableCell<>() {
-                private final javafx.scene.control.Button btn = new javafx.scene.control.Button("Click Me");{
+                private final JFXButton btn = new JFXButton("Confirm");{
+                    btn.getStyleClass().add("ui/style.css");
                     btn.setOnAction(event -> {
-                        ConfirmTable data = getTreeTableRow().getItem();
+                        TreeTableRow<ConfirmTable> row = getTreeTableRow();
+                        ConfirmTable data = row.getItem();
                         if (data != null)
-                            System.out.println("clicked plotNo: " + data.plotNoProperty().get());
+                            System.out.println("clicked plotNo: " + data.paymentIDProperty().getValue());
+                        String query2 = "Update Payment SET confirmed = 1 WHERE paymentID = " + data.paymentIDProperty().getValue();
+                        try {
+                            statement.executeUpdate(query2);
+                        } catch (SQLException e) {
+                            throw new RuntimeException(e);
+                        }
+                        TreeItem<ConfirmTable> itemToRemove = row.getTreeItem();
+                        if (itemToRemove != null && itemToRemove.getParent() != null) {
+                            itemToRemove.getParent().getChildren().remove(itemToRemove);
+                        }
                     });
                 }
                 @Override

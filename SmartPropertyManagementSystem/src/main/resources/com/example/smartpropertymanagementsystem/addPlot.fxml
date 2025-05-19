@@ -94,7 +94,7 @@
          </font>
       </Text>
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="54.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" wrappingWidth="170.546875">
+      <Text layoutX="54.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="170.546875">
          <font>
             <Font size="24.0" />
          </font>
@@ -105,6 +105,11 @@
          </font>
       </Text>
       <Text layoutX="623.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="151.5010986328125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="successfulText" layoutX="481.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Added Successfully" visible="false">
          <font>
             <Font size="24.0" />
          </font>

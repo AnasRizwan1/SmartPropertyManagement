@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+
 import java.sql.*;
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,6 +18,7 @@ public class AddInstallment implements sceneToDashboard, clearInfo, saveInfo {
     @FXML TextField paidAmountTextField;
     @FXML TextField installmentNoTextField;
     @FXML DatePicker receivingDatePicker;
+    @FXML Text successfulText;
 
     public void Dashboard(ActionEvent event) throws IOException {
         switchToDashboard(event);
@@ -36,5 +39,7 @@ public class AddInstallment implements sceneToDashboard, clearInfo, saveInfo {
         String query = "Call AddInstallment(" + Integer.parseInt(plotNoTextField.getText()) + "," + Integer.parseInt(paidAmountTextField.getText()) + ", STR_TO_DATE('" + receivingDatePicker.getValue().toString() + "', '%Y-%m-%d'))";
         System.out.println(query);
         statement.executeQuery(query);
+        successfulText.setVisible(true);
+        clearInformation(event);
     }
 }

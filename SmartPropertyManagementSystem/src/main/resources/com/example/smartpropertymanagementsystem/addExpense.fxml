@@ -58,5 +58,10 @@
          </font>
       </Text>
       <DatePicker fx:id="dateTextField" layoutX="493.0" layoutY="321.0" prefHeight="51.0" prefWidth="340.0" />
+      <Text fx:id="successfulText" layoutX="517.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Added Successfully!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
