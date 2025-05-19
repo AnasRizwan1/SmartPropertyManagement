@@ -10,20 +10,20 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartpropertymanagementsystem.ExpenseReport">
    <children>
-      <Label layoutX="259.0" layoutY="5.0" text="Expense Report" />
+      <Label layoutX="584.0" layoutY="8.0" text="Expense Report" />
       <JFXButton fx:id="previousButton" layoutX="14.0" layoutY="10.0" onAction="#Dashboard" text="&lt;--" />
-      <Text layoutX="37.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:" />
-      <JFXTreeTableView fx:id="treeTableView" layoutX="67.0" layoutY="221.0" prefHeight="400.0" prefWidth="635.0">
+      <Text layoutX="111.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:" />
+      <JFXTreeTableView fx:id="treeTableView" layoutX="67.0" layoutY="221.0" prefHeight="400.0" prefWidth="1153.0">
          <columns>
-            <TreeTableColumn fx:id="expenseIDColumn" prefWidth="135.19998168945312" text="Expense ID" />
-            <TreeTableColumn fx:id="headColumn" prefWidth="205.6000518798828" text="Head" />
-            <TreeTableColumn fx:id="amountColumn" prefWidth="163.199951171875" text="Amount" />
-            <TreeTableColumn fx:id="dateColumn" prefWidth="129.5999633789063" text="Date" />
+            <TreeTableColumn fx:id="expenseIDColumn" prefWidth="152.53331756591797" text="Expense ID" />
+            <TreeTableColumn fx:id="headColumn" prefWidth="429.0666198730469" text="Head" />
+            <TreeTableColumn fx:id="amountColumn" prefWidth="287.73333740234375" text="Amount" />
+            <TreeTableColumn fx:id="dateColumn" prefWidth="285.86669921875" text="Date" />
          </columns>
       </JFXTreeTableView>
-      <Text layoutX="44.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" />
-      <DatePicker fx:id="fromDatePicker" layoutX="92.0" layoutY="63.0" />
-      <DatePicker fx:id="toDatePicker" layoutX="92.0" layoutY="120.0" />
-      <JFXButton fx:id="searchButton" layoutX="92.0" layoutY="167.0" onAction="#search" text="Search" />
+      <Text layoutX="118.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:" />
+      <DatePicker fx:id="fromDatePicker" layoutX="166.0" layoutY="59.0" prefHeight="40.0" prefWidth="274.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="166.0" layoutY="116.0" prefHeight="40.0" prefWidth="272.0" />
+      <JFXButton fx:id="searchButton" layoutX="381.0" layoutY="174.0" onAction="#search" prefHeight="30.0" prefWidth="62.0" text="Search" />
    </children>
 </AnchorPane>

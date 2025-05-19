@@ -60,6 +60,7 @@ public class Confirmation implements sceneToDashboard, Initializable {
             action.setCellFactory(param -> new javafx.scene.control.TreeTableCell<>() {
                 private final JFXButton btn = new JFXButton("Confirm");{
                     btn.getStyleClass().add("ui/style.css");
+                    btn.setStyle("-fx-background-color: #28965a;");
                     btn.setOnAction(event -> {
                         TreeTableRow<ConfirmTable> row = getTreeTableRow();
                         ConfirmTable data = row.getItem();
